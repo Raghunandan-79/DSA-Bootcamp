@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compile & Run",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "g++ -std=c++17 -O2 -Wall \"${file}\" -o /tmp/cpp_program && /tmp/cpp_program < \"${fileDirname}/input.txt\" > \"${fileDirname}/output.txt\""
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "never",
+        "panel": "shared",
+        "focus": false,
+        "echo": false,
+        "showReuseMessage": false
+      },
+      "problemMatcher": []
+    }
+  ]
+}
