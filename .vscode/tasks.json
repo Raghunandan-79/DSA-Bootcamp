@@ -2,12 +2,12 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Compile & Run",
+      "label": "Compile & Run C++",
       "type": "shell",
       "command": "bash",
       "args": [
         "-c",
-        "g++ -std=c++17 -O2 -Wall \"${file}\" -o /tmp/cpp_program && /tmp/cpp_program < \"${fileDirname}/input.txt\" > \"${fileDirname}/output.txt\""
+        "g++ -std=c++17 -O2 -Wall \"${file}\" -o /tmp/cpp_program && /tmp/cpp_program < \"${workspaceFolder}/input.txt\" > \"${workspaceFolder}/output.txt\""
       ],
       "group": {
         "kind": "build",
@@ -15,9 +15,9 @@
       },
       "presentation": {
         "reveal": "never",
-        "panel": "shared",
-        "focus": false,
         "echo": false,
+        "focus": false,
+        "panel": "shared",
         "showReuseMessage": false
       },
       "problemMatcher": []
