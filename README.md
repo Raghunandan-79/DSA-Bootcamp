@@ -1,1 +1,1 @@
-# This is the repo for DSA practice problems and assignments from 100xDevs bootcamp 1.0
+# This is the repo for DSA practice problems and assignments from 100xSchool bootcamp 1.0
