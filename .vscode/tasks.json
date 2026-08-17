@@ -2,25 +2,53 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Compile & Run C++",
+      "label": "Compile and run",
       "type": "shell",
-      "command": "bash",
+      "command": "",
       "args": [
-        "-c",
-        "g++ -std=c++17 -O2 -Wall \"${file}\" -o /tmp/cpp_program && /tmp/cpp_program < \"${workspaceFolder}/input.txt\" > \"${workspaceFolder}/output.txt\""
+        "copy",
+        "\"${file}\"",
+        "${workspaceFolder}\\jspwTest.cpp",
+        "&&",
+        "g++",
+        "jspwTest.cpp",
+        "-o",
+        "jspwTest",
+        "&&",
+        "jspwTest",
+        "<",
+        "input.txt",
+        ">",
+        "output.txt",
+        "&&",
+        "del",
+        "jspwTest.exe",
+        "&&",
+        "del",
+        "jspwTest.cpp"
       ],
+      "presentation": {
+        "reveal": "never"
+      },
       "group": {
         "kind": "build",
-        "isDefault": true
+        "isDefault": true,
       },
-      "presentation": {
-        "reveal": "never",
-        "echo": false,
-        "focus": false,
-        "panel": "shared",
-        "showReuseMessage": false
-      },
-      "problemMatcher": []
+      "problemMatcher": {
+        "owner": "cpp",
+        "fileLocation": [
+          "relative",
+          "${workspaceRoot}"
+        ],
+        "pattern": {
+          "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+          "file": 1,
+          "line": 2,
+          "column": 3,
+          "severity": 4,
+          "message": 5
+        }
+      }
     }
   ]
 }
