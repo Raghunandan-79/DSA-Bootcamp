@@ -7,7 +7,7 @@
       "command": "bash",
       "args": [
         "-c",
-        "cp \"${file}\" \"${workspaceFolder}/jspwTest.cpp\" && g++ \"${workspaceFolder}/jspwTest.cpp\" -o \"${workspaceFolder}/jspwTest\" && \"${workspaceFolder}/jspwTest\" < \"${workspaceFolder}/input.txt\" > \"${workspaceFolder}/output.txt\" && rm \"${workspaceFolder}/jspwTest\" \"${workspaceFolder}/jspwTest.cpp\""
+        "cp \"${file}\" \"${workspaceFolder}/jspwTest.go\" && go build -o \"${workspaceFolder}/jspwTest\" \"${workspaceFolder}/jspwTest.go\" && \"${workspaceFolder}/jspwTest\" < \"${workspaceFolder}/input.txt\" > \"${workspaceFolder}/output.txt\" && rm \"${workspaceFolder}/jspwTest\" \"${workspaceFolder}/jspwTest.go\""
       ],
       "presentation": {
         "reveal": "never"
@@ -17,7 +17,7 @@
         "isDefault": true
       },
       "problemMatcher": {
-        "owner": "cpp",
+        "owner": "go",
         "fileLocation": [
           "relative",
           "${workspaceRoot}"
