@@ -1,0 +1,27 @@
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
+
+func main() {
+	in := bufio.NewReader(os.Stdin)
+	var n, m int
+	fmt.Fscan(in, &n, &m)
+
+	matrix := make([][]int, n)
+	for i := 0; i < n; i++ {
+		matrix[i] = make([]int, m)
+		for j := 0; j < m; j++ {
+			fmt.Fscan(in, &matrix[i][j])
+		}
+	}
+
+	for j := 0; j < m; j++ {
+		for i := 0; i < n; i++ {
+			fmt.Printf("%d ", matrix[i][j])
+		}
+	}
+}
